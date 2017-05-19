@@ -19,7 +19,10 @@ def get_loader(root, batch_size, scale_size, data_format, split=None, is_graysca
         if len(paths) != 0:
             break
 
-    with Image.open(paths[0]) as img:
+    print('paths[0]', paths[0])
+    #with Image.open(paths[0]) as img:
+    img = Image.open(paths[0]) 
+    if img:
         w, h = img.size
         shape = [h, w, 3]
 
